@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calcbody{
+    width: 400px;
+    height: 700px;
+    padding: 15px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.calcbody .screen{
+    width: 90%;
+    height: 20%;
+    border: 1px solid black;
+}
+.calcbody .buttons{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.calcbody .buttons .co{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+}
+.calcbody .buttons .co button{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 0 10px 0 10px;
+    background-color: blue; 
+}
+.calcbody .buttons .co button.equal{
+    width: 50%;
+}
