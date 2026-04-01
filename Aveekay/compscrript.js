@@ -14,12 +14,12 @@ const multiply = document.getElementById("multi");
 const zero = document.getElementById("zero");
 const equal = document.getElementById("equals");
 const scr = document.querySelector(".screen")
-
-let total
-
+const otherActBtn = ["+", "-", "/", "*"]
 
 const num = [nine, eight, seven, six, five, four, three, two, one, zero]
 const actBtn = [plus, minus, divide, multiply, equal]
+
+let total
 
 num.forEach(e => {
     e.addEventListener('click', ()=> {
@@ -28,11 +28,12 @@ num.forEach(e => {
 });
 actBtn.forEach(e => {
     e.addEventListener('click', f =>{
-        let otherActBtn = ["+", "-", "/", "*"]
         for (let i = 0; i < otherActBtn.length; i++) {
             const element = otherActBtn[i];
+
+            console.log(!scr.innerText.includes(element))
             
-            if (f.innerText !== "=" && !scr.innerText.includes(element)) {
+            if (e.innerText !== "=" && !scr.innerText.includes(element)) {
                 scr.innerText = `${scr.innerText}${e.innerText}`
                 break
             }else if (scr.innerText.includes(element)){
