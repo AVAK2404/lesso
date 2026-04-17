@@ -1,0 +1,15 @@
+const nine = document.getElementById("nine");
+const eight = document.getElementById("eight")
+const seven = document.getElementById("seven")
+const plus = document.getElementById("+")
+const six = document.getElementById("six")
+const five = document.getElementById("five")
+const four = document.getElementById("four")
+const subtract = document.getElementById("-")
+const three = document.getElementById("three")
+const two = document.getElementById("two")
+const one = document.getElementById("one")
+const divide = document.getElementById("divide")
+const zero = document.getElementById("zero")
+const multi = document.getElementById("equals")
+

@@ -20,33 +20,48 @@ const num = [nine, eight, seven, six, five, four, three, two, one, zero]
 const actBtn = [plus, minus, divide, multiply, equal]
 
 let total
+let condition = false
 
 num.forEach(e => {
     e.addEventListener('click', ()=> {
-        scr.innerText = `${scr.innerText}${e.innerText}`
+        for (let i = 0; i < otherActBtn.length; i++) {
+            const element = otherActBtn[i];
+            
+            if (scr.innerText.slice(-1) !== element) {
+                condition = false
+            }else{
+                condition = true
+            }
+        }
+
+        console.log(condition)
+
+        if (condition === true) {
+            scr.innerText = `${scr.innerText}${e.innerText}`
+        }else{
+            scr.innerText = `${scr.innerText} ${e.innerText}`
+        }
     })
 });
 actBtn.forEach(e => {
     e.addEventListener('click', f =>{
         for (let i = 0; i < otherActBtn.length; i++) {
             const element = otherActBtn[i];
-
-            console.log(!scr.innerText.includes(element))
             
             if (e.innerText !== "=" && !scr.innerText.includes(element)) {
-                scr.innerText = `${scr.innerText}${e.innerText}`
+                scr.innerText = `${scr.innerText} ${e.innerText}`
                 break
             }else if (scr.innerText.includes(element)){
-                scr.innerText.split(f.innerText)
+                let parts = scr.innerText.split(e.innerText)
 
-                if (e.innerText === f.innerText) {
-                    if (e === "+") {
+                if (e.innerText === element) {
+                    if (e.innerText === "+") {
                         total = parseInt(parseInt(parts[0]) + parseInt(parts[1]))
-                    } else if (e === "-") {
+                    } else if (e.innerText === "-") {
                         total = parseInt(parseInt(parts[0]) - parseInt(parts[1]))
-                    } if (e === "*") {
+                    } if (e.innerText === "*") {
                         total = parseInt(parseInt(parts[0]) * parseInt(parts[1]))
-                    } else if (e === "/") {
+                    } else if (e.innerText === "/") {
                         total = parseInt(parseInt(parts[0]) / parseInt(parts[1]))
                     }
                 }
