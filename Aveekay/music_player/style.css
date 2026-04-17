@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif Arial, Helvetica;
+}
+body{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.playerBody{
+    width: 30%;
+    height: 95%;
+    border: 1px solid #000;
+    border-radius: 30px;
+    background-image: url('./daki burnt.jpg');
+    background-size: cover;
+    overflow: hidden;
+}
+.playerBody .sudoPlayerBody{
+    backdrop-filter: blur(50px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 6% 4%;
+}
+.playerBody img{
+    width: 100%;
+    height: 45%;
+}
+.playerBody .songName{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.playerBody .playerControls{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.playerBody .playerControls .track{
+    width: 90%;
+    border: 1px solid #000;
+}
+.playerBody .playerControls .track.ball{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    position: absolute;
+    left: 8.3%;
+    top: 48.1%;
+    background-color: #000;
+    cursor: pointer;
+}   
+.playerBody .playerControls .time{
+    width: 100%;
+    height: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3%;
+    padding: 0 4.3%;
+}
+.playerBody .playerControls .vol{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.playerBody .playerControls .vol .add, .playerBody .playerControls .vol .remove{
+    display: none;
+}
+.playerBody .playerControls .vol .add.active, .playerBody .playerControls .vol .remove.active{
+    display: block;
+}
+.playerBody .playerControls .controls{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 30% 0 0 0;
+}
+.playerBody .playerControls .controls .btn{
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid #000;
+    border-radius: 10000px;
+    padding: 5%;
+    margin: 0 3%;
+    cursor: pointer;
+}
+.playerBody .playerControls .controls .btn.playPause .pause{
+    display: none;
+}
+.playerBody .playerControls .controls .btn.prev, .playerBody .playerControls .controls .btn.next{
+    border: none;
+}
