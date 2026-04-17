@@ -59,9 +59,9 @@ two.addEventListener('click',()=>{
 three.addEventListener('click',()=>{
     scr.innerText = `${scr.innerText}3`
 })
-divide.addEventListener('click',()=>{
+divide.addEventListener('click', ()=>{
     let curscr = scr.innerText
-     if (cursur.includes("/")) {
+     if (curscr.includes("/")) {
         calc("/")
     }else{
         scr.innerText = `${scr.innerText} / `
@@ -72,7 +72,7 @@ zero.addEventListener('click',()=>{
 })
 multiply.addEventListener('click',()=>{
     let curscr = scr.innerText
-     if (cursur.includes("*")) {
+     if (curscr.includes("*")) {
         calc("*")
     }else{
         scr.innerText = `${scr.innerText} * `
@@ -100,7 +100,7 @@ function calc(e) {
             total = parseInt(parseInt(parts[0]) / parseInt(parts[1]))
         }
     }else{
-        let sig = ["+", "-", "/"]
+        let sig = ["+", "-", "*", "/"]
 
         sig.forEach(e => {
             if (curscr.includes(e)) {
